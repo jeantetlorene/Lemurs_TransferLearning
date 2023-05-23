@@ -18,6 +18,9 @@ Carly H. Batist[1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet[3],[4],[5],
 
 A quick 3 minute demo is available here on <a href="https://colab.research.google.com/drive/1G_zicIHNTrBJuiXJYsKqRMWktazdX3vx?usp=sharing">Google Colab demo</a>. The script applies the model to one audio file and generated predictions. The audio file and predictions can be loaded into Sonic Visualiser to that the predictions can easily be verified.
 
+![image](https://drive.google.com/uc?export=view&id=11ZA6GRCQcCJD6f7kFc3_EybuWzdiOUQ1)
+
+
 # Description of the codes 
 #### Pre-processing of the data 
 
