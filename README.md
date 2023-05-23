@@ -20,6 +20,8 @@ A quick 3 minute demo is available here on <a href="https://colab.research.googl
 
 ![image](https://drive.google.com/uc?export=view&id=11ZA6GRCQcCJD6f7kFc3_EybuWzdiOUQ1)
 
+A very faint black-and-white ruffed lemur vocalisation can be seen in the spectrogram above. The model is able to detect calls that were recorded far away from the microphone.
+
 
 # Description of the codes 
 #### Pre-processing of the data 
