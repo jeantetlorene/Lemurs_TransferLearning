@@ -31,6 +31,17 @@ A very faint black-and-white ruffed lemur vocalisation can be seen in the spectr
 
 DOI for data: 10.5281/zenodo.7956064
 
+The dataset was labelled as a binary classification problem, either vocalisations which contained roar shrieks (labelled as 'roar') or did not (labelled as 'no-roar'). The roars varied in amplitude, duration and environmental noise. See below for some examples of parts of audio files which were manually annotated.
+
+A 48 second roar shriek event:
+<img src="https://drive.google.com/uc?export=view&id=1gNiBJTgJOeipOp417VTIQHNyFsdpGl3e" width="900">
+
+An example of another animal vocalisation:
+<img src="https://drive.google.com/uc?export=view&id=1Q0GuQSPPJKP5TueefvSv_hqDkMscfCK_" width="900">
+
+Roar shriek and rain:
+<img src="https://drive.google.com/uc?export=view&id=1fQybOjJ4_WnlxUwMmCbB4H_qcqOUC9Sj" width="900">
+
 
 
 ## Description of the codes 
