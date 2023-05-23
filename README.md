@@ -4,6 +4,8 @@
 
 Fieldwork was conducted at Mangevo (21.3833S, 47.4667E), an isolated and undisturbed forest location within Ranomafana National Park (RNP), located in southeastern Madagascar, during the period of May to July 2019. To facilitate passive acoustic monitoring, we deployed a total of two SongMeter SM4 devices (manufactured by Wildlife Acoustics) and two Swift units (provided by the Cornell Yang Center for Conservation Bioacoustics). The placement of these recorders was strategically chosen within the central regions of known subgroups, ensuring a minimum distance of 300 meters between each device. The SongMeter devices operated at a sampling rate of 48 kHz, while the Swift units operated at 32 kHz, respectively, enabling comprehensive audio data collection throughout the study period.
 
+Link to the research article: [to appear soon]
+
 ## Authors
 
 Carly H. Batist [1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet [3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena [7], and Andrea L. Baden [1],[8]
