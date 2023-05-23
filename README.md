@@ -1,6 +1,6 @@
 # An integrated passive acoustic monitoring and deep learning pipeline applied to black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park,Madagascar
 
-Carly H. Batist[1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet[3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena[7], and Andrea L. Baden [1],[3]
+Carly H. Batist[1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet[3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena[7], and Andrea L. Baden [1],[8]
 
 [1]: The Graduate Center of the City University of New York, Department of Anthropology, New York, USA  
 [2]: Rainforest Connection (RFCx), Katy, USA  
