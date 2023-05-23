@@ -42,7 +42,18 @@ An example of another animal vocalisation:
 Roar shriek and rain:
 <img src="https://drive.google.com/uc?export=view&id=1fQybOjJ4_WnlxUwMmCbB4H_qcqOUC9Sj" width="900">
 
+### Libraries:
 
+Tested on Python 3.9.16
+
+soundfile==0.12.1
+librosa==0.8.1
+numpy==1.23.5
+yattag==1.15.1
+pandas==2.0.0
+scipy==1.10.1
+matplotlib==3.7.1
+tensorflow==2.12.0
 
 ## Description of the codes 
 ### Pre-processing of the data 
