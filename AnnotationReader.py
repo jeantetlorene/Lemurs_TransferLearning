@@ -3,6 +3,9 @@ import os
 import librosa
 from xml.dom import minidom
 
+# Reads a .svl file which contains the start/stop time for each annotated even
+# along with the class label.
+
 class AnnotationReader:
     def __init__(self, annotation_file_name, path, file_type, audio_extension):
         
@@ -11,7 +14,7 @@ class AnnotationReader:
         self.file_type = file_type
         self.audio_extension = audio_extension
         
-    
+    # This function reads an audio file and returns the amplitudes and sample rate of the audio.
     def read_audio_file(self, file_name, species_folder):
         '''
         file_name: string, name of file including extension, e.g. "audio1.wav"
@@ -24,7 +27,13 @@ class AnnotationReader:
         audio_amps, audio_sample_rate = librosa.load(audio_folder, sr=None)
 
         return audio_amps, audio_sample_rate
-    
+
+    # This reads the .svl file generated from Sonic Visualiser after an audio file
+    # has been manually annoated. These .svl files are essentially .XML files and thus
+    # each row in the file can be read to extract the start/stop time of each event.
+    # Each annotated event also has a label and this is extracted too. The function
+    # returns a Pandas dataframe which has the start/stop time for each annotated
+    # even along with the label.
     def get_annotation_information(self):
 
         if self.file_type == 'svl':
@@ -121,7 +130,11 @@ class AnnotationReader:
             df_raven_gibbons = pd.DataFrame({'Start': start_time, 'End':end_time ,'Label': labels})
 
             return df_raven_gibbons
-        
+    
+    # This function determines the audio location based on the annotation file name. 
+    # If the annotation file name contains a hyphen ('-'), it extracts the part before 
+    # the last hyphen and converts any other hyphens to forward slashes ('/'). 
+    # Otherwise, it returns an empty string.
     def get_audio_location(self):
         
         if '-' in self.annotation_file_name:
