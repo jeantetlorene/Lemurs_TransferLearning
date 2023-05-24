@@ -36,10 +36,13 @@ A very faint black-and-white ruffed lemur vocalisation can be seen in the spectr
 
 DOI for data: 10.5281/zenodo.7956064
 
-The dataset was labelled as a binary classification problem, either vocalisations which contained roar shrieks (labelled as 'roar') or did not (labelled as 'no-roar'). The roars varied in amplitude, duration and environmental noise. See below for some examples of parts of audio files which were manually annotated.
+The dataset was labelled as a binary classification problem, either vocalisations which contained roar shrieks (labelled as 'roar') or did not (labelled as 'no-roar'). The roars varied in amplitude, duration and environmental noise. See below for some examples of parts of audio files which were manually annotated. Note that in the spectrograms below we were not concerned with the height of the bounding boxes as we already know the frequency at which the black-and-white ruffed lemurs vocalise at. What was important was to correctly annotated the start and stop of the calls.
 
 A 48 second roar shriek event:
 <img src="https://drive.google.com/uc?export=view&id=1gNiBJTgJOeipOp417VTIQHNyFsdpGl3e" width="900">
+
+Another example of a roar shriek:
+<img src="https://drive.google.com/uc?export=view&id=1XoO7P2a21_Xrp8tZTdd8IdAQC-ryyd_8" width="900">
 
 An example of another animal vocalisation:
 <img src="https://drive.google.com/uc?export=view&id=1Q0GuQSPPJKP5TueefvSv_hqDkMscfCK_" width="900">
