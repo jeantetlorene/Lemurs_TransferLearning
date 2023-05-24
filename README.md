@@ -69,7 +69,7 @@ tensorflow==2.12.0
 
 ### Pre-processing of the data 
 
-![Preprocessing](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/cfeeda00-89ea-4b54-8a44-188e74c04411)
+![Preprocessing](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/8066c073-15d5-42f3-aeab-5bd6eddb3482)
 
 ### Training of the model 
 
