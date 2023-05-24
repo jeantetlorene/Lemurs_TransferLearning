@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 21 15:11:53 2022
-
-@author: ljeantet
-"""
-
 import glob, os
 import ntpath
 
@@ -44,6 +37,7 @@ INPUT_SHAPE = (128,151, 3)
 save_results_folder = os.path.join(species_folder, 'Predictions_1')
 number_classes = 2
 
+# Spectrogram hyper-parameters
 lowpass_cutoff = 4000 # Cutt off for low pass filter
 downsample_rate = 9600 # Frequency to downsample to
 nyquist_rate = 4800 # Nyquist rate (half of sampling rate)
@@ -54,7 +48,7 @@ n_mels = 128 # Spectrogram number of mells
 f_min = 500 # Spectrogram, minimum frequency for call
 f_max = 9000 # Spectrogram, maximum frequency for call
 
-
+# Name and location of the Tensorflow model
 model_file_name = 'A7-1-712788074.hdf5'
 model_filepath = '~/Lemurs/Weights/model=2023_03_14/'+model_file_name
 
@@ -62,7 +56,7 @@ model_filepath = '~/Lemurs/Weights/model=2023_03_14/'+model_file_name
 if os.path.isdir(save_results_folder) == False:
     os.mkdir(save_results_folder)
 
-
+# Reads an audio file and returns the amplitudes (audio data) and sample rate.
 def read_audio_file(file_name):
     '''
     file_name: string, name of file including extension, e.g. "audio1.wav"
@@ -74,17 +68,20 @@ def read_audio_file(file_name):
 
     return audio_amps, audio_sample_rate
 
+# Designs a low-pass Butterworth filter given the cutoff frequency and Nyquist frequency.
 def butter_lowpass(cutoff, nyq_freq, order=4):
     normal_cutoff = float(cutoff) / nyq_freq
     b, a = signal.butter(order, normal_cutoff, btype='lowpass')
     return b, a
 
+# Applies a low-pass Butterworth filter to the input data.
 def butter_lowpass_filter(data, cutoff_freq, nyq_freq, order=4):
     # Source: https://github.com/guillaume-chevalier/filtering-stft-and-laplace-transform
     b, a = butter_lowpass(cutoff_freq, nyq_freq, order=order)
     y = signal.filtfilt(b, a, data)
     return y
 
+# Downsamples an audio file to a given new sample rate.
 def downsample_file(amplitudes, original_sr, new_sample_rate):
     '''
     Downsample an audio file to a given new sample rate.
@@ -98,6 +95,7 @@ def downsample_file(amplitudes, original_sr, new_sample_rate):
                             new_sample_rate, 
                             res_type='kaiser_fast'), new_sample_rate
 
+# Converts the amplitude values of an audio signal into a mel-spectrogram.
 def convert_single_to_image(audio):
     '''
     Convert amplitude values into a mel-spectrogram.
@@ -122,6 +120,7 @@ def convert_single_to_image(audio):
     # 3 different input
     return np.stack([S1,S1**3,S1**5], axis=2)
 
+# Converts a number of audio segments into their corresponding spectrograms.
 def convert_all_to_image(segments):
     '''
     Convert a number of segments into their corresponding spectrograms.
@@ -143,6 +142,7 @@ def add_extra_dim(spectrograms):
                                spectrograms.shape[2],1))
     return spectrograms
 
+#  Makes predictions using a trained model on a given test data.
 def predict(model, X_test):
     ''' 
     Predict on one testing file and compute softmax output.
@@ -162,6 +162,7 @@ def load_model(model_filepath):
     
     return model
 
+# Groups consecutive numbers from a list into sublists.
 def group_consecutives(vals, step=1):
     """Return list of consecutive lists of numbers from vals (number list)."""
     run = []
@@ -176,6 +177,7 @@ def group_consecutives(vals, step=1):
         expect = v + step
     return result
 
+# Groups numbers in a list into consecutive ranges.
 def group(L):
     L.sort()
     first = last = L[0]
@@ -187,7 +189,7 @@ def group(L):
             first = last = n
     yield first, last # Yield the last group
     
-    
+# Converts a dataframe containing information about detected calls into a Sonic Visualiser Layer (SVL) XML format.  
 def dataframe_to_svl(dataframe, sample_rate, length_audio_file_frames):
 
     doc, tag, text = Doc().tagtext()
@@ -274,6 +276,8 @@ def save_detected_calls(groupped_detection, amplitudes, file_name, sample_rate, 
 
         print ('')
 
+# Processes a single audio file by applying filtering, downsampling, 
+# converting to spectrograms, making predictions, and saving the results.
 def process_one_file(file_name,species_folder, model, sub_folder_name):
     
     print ('Reading audio file...')
@@ -385,6 +389,8 @@ def process_one_file(file_name,species_folder, model, sub_folder_name):
     
     print ('Done')
 
+# Main function that processes all the audio files in 
+# the specified folder by calling the process_one_file() function for each file.
 def process_files():
     
     global species_folder
