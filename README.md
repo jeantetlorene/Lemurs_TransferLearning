@@ -78,6 +78,8 @@ Since the model was pre-trained on ImageNet, it expects a 3-channel input. We fo
 
 ### Training
 
+![Training](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/3dcbd0d5-54ac-4bf0-80ad-9cd5615c69f1)
+
 ### Inference and predicting on new data
 
 ![Prediction](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/47a9f5d1-f0d4-4e4f-8911-8b7a543135f7)
