@@ -64,12 +64,12 @@ matplotlib==3.7.1
 
 tensorflow==2.12.0
 
-## Description of the codes 
+## Description of the codes
+
+
 ### Pre-processing of the data 
 
-
-![Preprocessing](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/d6a1c503-52c1-4968-8b94-cee01410a3ea)
-
+![Preprocessing](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/cfeeda00-89ea-4b54-8a44-188e74c04411)
 
 ### Training of the model 
 
