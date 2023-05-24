@@ -1,15 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 18 15:30:10 2022
-
-@author: ljeantet
-"""
-
-
 from Preprocessing_helper import *
 import time
 
-#parameters
+# spectrogram hyper-parameters
 
 species_folder = '~/Lemurs' # Should contain /Audio and /Annotations
 lowpass_cutoff = 4000 # Cutt off for low pass filter
@@ -38,18 +30,22 @@ pre_pro = Preprocessing(species_folder, lowpass_cutoff,
                 hop_length, n_mels, f_min, f_max, file_type, 
                 audio_extension)
 
-
+# Start the timer
 starting_time = time.time()
 
+# Create a dataset of mel-spectrograms and corresponding
+# labels. In this case, a binary dataset.
 X_calls, Y_calls = pre_pro.create_dataset(True)
 
-
+# Calculate how long it took to build the dataset
 duration=time.time()-starting_time
 
 
 print("Processing took {:.2f} seconds".format(duration))
 print("Which is {:.2f} minutes".format(duration/60))
 
-
+# Save all of the pre-processed spectrograms and their labels
+# to a pickle file. Pre-processing is time consuming it this
+# allows for saving and retrieval. 
 pre_pro.save_data_to_pickle(X_calls, Y_calls, "X_train", "Y_train")
 
