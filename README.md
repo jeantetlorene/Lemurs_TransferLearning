@@ -8,7 +8,7 @@ Link to the research article: [to appear soon]
 
 ## Authors
 
-Carly H. Batist [1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet [3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena [7], and Andrea L. Baden [1],[8]
+Carly H. Batist [1],[2],[9], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet [3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena [7], and Andrea L. Baden [1],[8], [9]
 
 [1]: The Graduate Center of the City University of New York, Department of Anthropology, New York, USA  
 [2]: Rainforest Connection (RFCx), Katy, USA  
@@ -18,6 +18,7 @@ Carly H. Batist [1],[2], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet [3],[4],[5
 [6]: University of Antananarivo, Department of Animal Biology, Antananarivo, Madagascar  
 [7]: Centre ValBio, Ranomafana, Madagascar  
 [8]: Hunter College of the City University of New York, Department of Anthropology, New York, USA  
+[9]: New York Consortium in Evolutionary Primatology (NYCEP); New York, NY, USA
 
 ## Demo
 
