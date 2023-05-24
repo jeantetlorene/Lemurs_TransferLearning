@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 18 15:27:22 2022
-
-@author: ljeantet
-"""
 import glob, os
 from os import listdir
 import numpy as np
@@ -18,7 +12,6 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import math
 from AnnotationReader import *
-
 
 class Preprocessing:
     
@@ -65,11 +58,15 @@ class Preprocessing:
         
         return audio_amps, audio_sample_rate
     
+    # This function designs a lowpass Butterworth filter. 
     def butter_lowpass(self, cutoff, nyq_freq, order=4):
         normal_cutoff = float(cutoff) / nyq_freq
         b, a = signal.butter(order, normal_cutoff, btype='lowpass')
         return b, a
 
+    # This function applies a lowpass Butterworth filter to the given data. 
+    # It takes the data, cutoff frequency, Nyquist frequency, 
+    # and filter order as inputs, and returns the filtered data.
     def butter_lowpass_filter(self, data, cutoff_freq, nyq_freq, order=4):
         # Source: https://github.com/guillaume-chevalier/filtering-stft-and-laplace-transform
         b, a = self.butter_lowpass(cutoff_freq, nyq_freq, order=order)
@@ -79,10 +76,6 @@ class Preprocessing:
     def downsample_file(self, amplitudes, original_sr, new_sample_rate):
         '''
         Downsample an audio file to a given new sample rate.
-        amplitudes:
-        original_sr:
-        new_sample_rate:
-        
         '''
         return librosa.resample(amplitudes, 
                                 original_sr, 
@@ -108,7 +101,6 @@ class Preprocessing:
         spec_scaled = (spec_norm - spec_min) / (spec_max - spec_min)
         S1 = spec_scaled
 
-    
         # 3 different input
         return np.stack([S1,S1**3,S1**5], axis=2)
 
@@ -360,8 +352,5 @@ class Preprocessing:
             w+=1
         # Convert to numpy arrays
         X_calls, Y_calls = np.asarray(X_calls), np.asarray(Y_calls)
-        
-        # Add extra dimension
-        #X_calls = self.add_extra_dim(X_calls)
 
         return X_calls, Y_calls
