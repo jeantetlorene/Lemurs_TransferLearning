@@ -64,14 +64,19 @@ matplotlib==3.7.1
 
 tensorflow==2.12.0
 
-## Description of the codes
+## Code description
 
+Below we provide a high level overview of the Python scripts.
 
-### Pre-processing of the data 
+### Data pre-processing
 
 ![Preprocessing](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/8066c073-15d5-42f3-aeab-5bd6eddb3482)
 
-### Training of the model 
+Since the model was pre-trained on ImageNet, it expects a 3-channel input. We followed the approach described in Dufourq, E., Batist, C., Foquet, R. and Durbach, I., 2022. Passive acoustic monitoring of animal populations with transfer learning. Ecological Informatics, 70. Below is an example of a spectrogram, denoted as S, which contains Hainan gibbon vocalisations and  was used to create two additional spectrograms. The additional spectrograms were created by taking the exponent of each pixel within S. In the first case each pixel was raised to the power of 3, and in the second, to the power of 5. Since the spectrograms were normalised between 0 and 1, the values in the new spectrograms do not exceed 1.
 
-### Application of the model
+![1-s2 0-S1574954122001388-gr2](https://github.com/jeantetlorene/Lemurs_TransferLearning/assets/15357701/6ea7febe-5477-465f-8f3c-a0f689a04d59)
+
+### Training
+
+### Inference and predicting on new data
 
