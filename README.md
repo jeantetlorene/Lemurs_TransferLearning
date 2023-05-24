@@ -6,6 +6,8 @@ Fieldwork was conducted at Mangevo (21.3833S, 47.4667E), an isolated and undistu
 
 Link to the research article: [to appear soon]
 
+Keywords: conservation, ecoacoustics, machine learning, strepsirrhine, CNNs, bioacoustics, passive acoustic monitoring
+
 ## Authors
 
 Carly H. Batist [1],[2],[9], Emmanuel Dufourq [3],[4],[5], Lorene Jeantet [3],[4],[5], Mendrika N.Razafindraibe [6], Francois Randriamanantena [7], and Andrea L. Baden [1],[8], [9]
